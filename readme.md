@@ -11,19 +11,11 @@ you creatively focus on your project by minimizing the amount of code needed
 for a given task. </pre>
 
 ###################
-<h2> Removed Index </h2>
+<h2> Idle Timeout </h2>
 ###################
 
-<pre>If we need a clean url in codeigniter. we need to remove index.php from url in codeigniter. 
-Default you will get index.php in url in codeigniter cause index.php file included with url in codeigniter. 
-so url looks like :-
-
-http://example.com/index.php/controller/function
-
-codeigniter provide easy way for url rewrite functionality to get clean url or remove index.php from url in codeigniter. 
-we can easily done by using .htaccess some of config file changes. 
-after remove index.php from url you will see controller name in url like “http://example.com/controller”.
-We need to remove index.php from url so we can get clean url for our codeigniter site and url not looks odd or to get a user friendly or seo friendly url.</pre>
+<pre>Idle timeout was added to monitor the the action of the user if he/she decides to walk away from their computer.
+It has been added as a precautionary measure.</pre>
 
 ###################
 <h2> HMVC Structure </h2>
