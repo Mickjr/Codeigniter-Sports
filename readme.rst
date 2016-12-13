@@ -1,70 +1,60 @@
 ###################
-What is CodeIgniter
+<h1> Codeigniter-Sports </h1>
 ###################
 
-CodeIgniter is an Application Development Framework - a toolkit - for people
+<pre>CodeIgniter is an Application Development Framework - a toolkit - for people
 who build web sites using PHP. Its goal is to enable you to develop projects
 much faster than you could if you were writing code from scratch, by providing
 a rich set of libraries for commonly needed tasks, as well as a simple
 interface and logical structure to access these libraries. CodeIgniter lets
-you creatively focus on your project by minimizing the amount of code needed
-for a given task.
+you creatively focus on your project by minimizing the amount of code needed 
+for a given task. </pre>
 
-*******************
-Release Information
-*******************
+###################
+<h2> Removed Index </h2>
+###################
 
-This repo contains in-development code for future releases. To download the
-latest stable release please visit the `CodeIgniter Downloads
-<https://codeigniter.com/download>`_ page.
+<pre>If we need a clean url in codeigniter. we need to remove index.php from url in codeigniter. 
+Default you will get index.php in url in codeigniter cause index.php file included with url in codeigniter. 
+so url looks like :-
 
-**************************
-Changelog and New Features
-**************************
+http://example.com/index.php/controller/function
 
-You can find a list of all changes for each release in the `user
-guide change log <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/changelog.rst>`_.
+codeigniter provide easy way for url rewrite functionality to get clean url or remove index.php from url in codeigniter. 
+we can easily done by using .htaccess some of config file changes. 
+after remove index.php from url you will see controller name in url like “http://example.com/controller”.
+We need to remove index.php from url so we can get clean url for our codeigniter site and url not looks odd or to get a user friendly or seo friendly url.</pre>
 
-*******************
-Server Requirements
-*******************
+###################
+<h2> HMVC Structure </h2>
+###################
 
-PHP version 5.6 or newer is recommended.
+<pre>The main controller doesn’t need to know about it, and is totally isolated from it. In CI we can’t call more than 1 controller per request. 
+Therefore, to achieve HMVC, we have to simulate controllers. It can be done with libraries, or with this “Modular Extensions HMVC” contribution.
 
-It should work on 5.3.7 as well, but we strongly advise you NOT to run
-such old versions of PHP, because of potential security and performance
-issues, as well as missing features.
+The differences between using a library and a “Modular HMVC” HMVC class is:
 
-************
-Installation
-************
+No need to get and use the CI instance within an HMVC class
+HMVC classes are stored in a modules directory as opposed to the libraries directory.</pre>
 
-Please see the `installation section <https://codeigniter.com/user_guide/installation/index.html>`_
-of the CodeIgniter User Guide.
 
-*******
-License
-*******
+###################
+<h2> Public Folder </h2>
+###################
 
-Please see the `license
-agreement <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/license.rst>`_.
+<pre>A better way to organise your folders would be:
 
-*********
-Resources
-*********
+    root
+        code_igniter
+            application_folder
+                config
+                controllers
+                models
+                ...
+            system_folder
+        public_html
+            css
+            js
+            images index.php .htaccess </pre>
 
--  `User Guide <https://codeigniter.com/docs>`_
--  `Language File Translations <https://github.com/bcit-ci/codeigniter3-translations>`_
--  `Community Forums <http://forum.codeigniter.com/>`_
--  `Community Wiki <https://github.com/bcit-ci/CodeIgniter/wiki>`_
--  `Community IRC <https://webchat.freenode.net/?channels=%23codeigniter>`_
 
-Report security issues to our `Security Panel <mailto:security@codeigniter.com>`_
-or via our `page on HackerOne <https://hackerone.com/codeigniter>`_, thank you.
-
-***************
-Acknowledgement
-***************
-
-The CodeIgniter team would like to thank EllisLab, all the
-contributors to the CodeIgniter project and you, the CodeIgniter user.
